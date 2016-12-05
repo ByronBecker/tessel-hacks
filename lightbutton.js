@@ -23,9 +23,10 @@ board.on("ready", () => {
       //read light(resistance) level to number on a scale of 0-1, 0 is brightest (least resistance)
       //and 1 is complete darkness (most resistance)
       
-
       button.on("release", () => console.log("Button Released!")); 
+
       button.on("press", () => register.display(Math.floor(10*(1-number))));
+      //Reverse scale so 9 is brightest and 0 is darkest, and register to analog output
 
 });
       
